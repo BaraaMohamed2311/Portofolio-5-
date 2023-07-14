@@ -37,10 +37,28 @@ scroll_wrapper.addEventListener("scroll", function () {
     if(position > skills_section.offsetTop -150){
         for(let i = 0 ; i< skills.length ; i++){
 
-
             bars[i].style = `width:${bars[i].getAttribute("data-width")};`
     
         }
+
+/************************************animations***************************************/
+let skills_shape = document.querySelector(".skills-shape");
+let skills_img = document.querySelector(".skills-img");
+let right_skills = document.querySelector(".right-skills");
+
+skills_shape.style = `    animation: rotate-border 7s linear infinite  , slide_left_to_right 0.7s  linear , opacities 1s 0.5 linear;
+-webkit-animation: rotate-border 7s linear infinite  , slide_left_to_right 0.7s  linear , opacities 1s 0.5 linear; opacity:1;`
+
+skills_img.style = `     animation: slide_left_to_right 0.7s  linear , opacities 1s 0.5 linear;
+-webkit-animation: slide_left_to_right 0.7s  linear , opacities 1s 0.5 linear;opacity:1;`
+
+right_skills.style = `animation:opacities 1s 0.5 linear;opacity:1;`
+
+
+        if(position >1250){
+            project_cards.style = `animation:opacities 1s 0.5 linear;opacity:1;`
+        }
+
     }
 })
 

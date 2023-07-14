@@ -165,6 +165,8 @@ i{
     height: calc(100vh - 8rem);
     width: 40rem;
     margin: 14rem 0 0 7rem;
+    animation: opacities 2s 0.5 linear;
+    -webkit-animation: opacities 2s 0.5 linear;
 }
 
 .main .main-text h1{
@@ -182,9 +184,8 @@ i{
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid var(--darker-gray);
-    animation: control-width 3s  steps(63) both  ,
-     blink 0.5s infinite;-webkit-animation: control-width 3s  steps(63) both  , blink 0.5s infinite;
-    
+    animation: control-width 3s  steps(63) both  , blinker 0.5s infinite ;
+    -webkit-animation: control-width 3s  steps(63) both  , blinker 0.5s infinite ;
 }
 
 
@@ -202,7 +203,7 @@ i{
       width: 45rem;
     }
   }
-  @keyframes blink {
+  @keyframes blinker {
     from {
       border-right-color: var(--main-color);
     }
@@ -211,6 +212,8 @@ i{
     }
   }
 
+
+  
 
    .icons{
     margin-top: 2rem;
@@ -249,6 +252,8 @@ i{
     -moz-transition: 1s ease;
     -ms-transition: 1s ease;
     -o-transition: 1s ease;
+    animation: opacities 2s 0.5 linear;
+    -webkit-animation: opacities 2s 0.5 linear;
 }
 
 .main .img-box:hover{
@@ -321,15 +326,22 @@ i{
 .left-skills {
     width: 45%;
     height: 100%;
+
 }
 
  .right-skills{
     width: 55%;
     height: 100%;
+    opacity: 0;
+
 }
 
 .left-skills{
     position: relative;
+}
+
+.skills-shape {
+    opacity: 0;
 }
 
 .skills-shape , .skills-img , .b1 , .b2 , .b3{
@@ -348,12 +360,9 @@ i{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    
+
 }
-.skills-shape{
-    animation: rotate-border 7s linear infinite;
-    -webkit-animation: rotate-border 7s linear infinite;
-}
+
 
 .skills-img{
     width: 26rem;
@@ -364,6 +373,7 @@ i{
     background-color: white;
     border-radius: 50%;
     overflow: hidden;
+    opacity: 0;
 }
 
 .skills-img  img{
@@ -505,6 +515,7 @@ i{
     cursor: grab;
     width: 180rem;
     align-items: start;
+    opacity: 0;
 }
 
 .cards-wrapper .card{
@@ -584,6 +595,37 @@ i{
 .cards-wrapper .card  button:hover >a{
     color: white;
 }
+
+
+@keyframes opacities {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+
+
+  @keyframes slide_left_to_right {
+    0%{
+        left: -3rem;
+    }
+    100%{
+        left: 50%;
+    }
+  }
+
+  @keyframes slide_right_to_left {
+    0%{
+        margin-left: 20rem;
+    }
+    100%{
+        margin-left: 0rem;
+    }
+  }
+
+
 
 
 

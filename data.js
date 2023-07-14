@@ -16,7 +16,7 @@ let skills = [
     },
     {
       "name":"REACT",
-      "rate":"70",
+      "rate":"50",
 
     },
   ];
