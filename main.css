@@ -100,12 +100,7 @@ i{
 }
 
 .logo{
-    font-size: 6rem;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
+    font-size: 5rem;
     position: relative;
     transition: 0.3s linear;
     -webkit-transition: 0.3s linear;
@@ -120,9 +115,9 @@ i{
     font-size: 3.5rem;
     color: var(--darkest-gray);
     position: absolute;
-    bottom: 1rem;
-    left: -4rem;
-    opacity: 0;
+    bottom: 0.5rem;
+    left: 2rem;
+    opacity: 1;
     transition: 0.7s linear;
     -webkit-transition: 0.7s linear;
     -moz-transition: 0.7s linear;
@@ -138,10 +133,6 @@ i{
     -o-transform: rotate(0deg);
 }
 
-.logo:hover::after{
-    left: 2.2rem;
-    opacity: 1;
-}
 
 .nav-ul{
     gap: 5.5rem;
@@ -223,7 +214,7 @@ i{
 
    .icons{
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
    }
 
    .icons i{
@@ -236,7 +227,7 @@ i{
 }
 
    .icons i:hover{
-    color: var(--med-gray);
+    color: #00b08a;
    }
 
    .icons i:nth-of-type(1){
@@ -279,6 +270,8 @@ i{
     opacity: 1;
 
 }
+
+
 
 .main .img-box img{
     width: 70rem;
@@ -503,14 +496,14 @@ i{
 }
 
 .cards-wrapper .cards{
-    margin: 0 5rem;
+    margin: 0 0 0 50rem;
     white-space: nowrap;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     position: absolute;
-    width: 180rem;
-    padding: 0 2rem;
+    padding: 0 ;
     cursor: grab;
+    width: 180rem;
     align-items: start;
 }
 
@@ -594,8 +587,280 @@ i{
 
 
 
+/*********************RESPONSIVE***********************************************/
+
+@media (max-width:800px) {
+    html{
+        font-size: 11px;
+    }
+
+    .nav-ul{
+        gap: 2rem;
+        margin-right: 0rem;
+    }
+
+    .nav-ul .nav-li a{
+
+        font-size: 2rem;
+    }
+
+    .main .main-text{
+
+        height:50%;
+        margin: 8rem 1rem;
+    }
 
 
+
+    @keyframes control-width {
+        from {
+          width: 0;
+        }
+        to {
+          width: 40rem;
+        }
+      }
+
+    .main .main-text  h1{
+        font-size: 4rem;
+    }
+
+    .main .main-text  p{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .main .main-text  p:nth-of-type(1){
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        
+    }
+
+    .main .main-text  p:nth-of-type(2){
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        width: 100%;
+        
+    }
+
+    .main , .skills .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .img-box{
+
+        width: 100%;
+        height: 50%;
+        right: 0rem;
+        bottom: 0rem;
+
+    }
+
+
+
+
+
+/*****************************************/
+.skills .container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.left-skills {
+    width: 100%;
+    height: 50%;
+}
+
+ .right-skills{
+    width: 100%;
+    height: 50%;
+}
+
+/***********************************************/
+
+.cards-wrapper .cards{
+    margin: 0;
+    padding: 0 0 0 10rem;
+
+}
+
+
+}
+
+
+@media (min-width:800px) {
+    @media (max-width:1200px){
+
+        html{
+            font-size: 13px;
+        }
+    
+        .nav-ul{
+            gap: 2rem;
+            margin-right: 0rem;
+        }
+    
+        .nav-ul .nav-li a{
+    
+            font-size: 2rem;
+        }
+    
+        .main .main-text{
+    
+            height:50%;
+            margin: 8rem 1rem;
+        }
+    
+    
+    
+        @keyframes control-width {
+            from {
+              width: 0;
+            }
+            to {
+              width: 38.5rem;
+            }
+          }
+    
+        .main .main-text  h1{
+            font-size: 4rem;
+        }
+    
+        .main .main-text  p{
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    
+        .main .main-text  p:nth-of-type(1){
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            
+        }
+    
+        .main .main-text  p:nth-of-type(2){
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            width: 100%;
+            
+        }
+    
+        .main , .skills .container{
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .main .img-box{
+    
+            width: 100%;
+            height: 50%;
+            right: 0rem;
+            bottom: 0rem;
+    
+        }
+
+        .main .img-box img{
+            width: 60rem;
+            height: 40rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            
+        }
+    
+    
+    /*****************************************/
+    .skills .container{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    
+    .left-skills {
+        width: 100%;
+        height: 50%;
+    }
+    
+     .right-skills{
+        width: 100%;
+        height: 50%;
+    }
+    
+    /***********************************************/
+    
+    .cards-wrapper .cards{
+        align-content:flex-start;
+        margin: 0;
+    padding: 0 0 0 48rem;
+    }
+
+
+    }
+
+}
+
+@media (min-width:1200px) {
+    @media (max-width:1500px) {
+        html{
+            font-size: 14px;
+        }
+
+    
+
+    @keyframes control-width {
+        from {
+          width: 0;
+        }
+        to {
+          width: 45.5rem;
+        }
+      }
+
+    .main .img-box{
+        position: absolute;
+        background-color: var(--dark-gray);
+        width: 36rem;
+        height: 36rem;
+        box-shadow: inset 3rem -6rem  13rem #171717 , inset -8rem 10rem  16rem #ffffff73;
+        right: 8rem;
+        bottom: 1rem;
+        z-index: 4;
+        transition: 1s ease;
+        -webkit-transition: 1s ease;
+        -moz-transition: 1s ease;
+        -ms-transition: 1s ease;
+        -o-transition: 1s ease;
+    }
+    
+    .main .img-box img{
+        width: 66rem;
+        height: 44rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        
+    }
+
+    
+}
+}
 
 
 
