@@ -170,6 +170,7 @@ i{
 
 .main{
     position: relative;
+    overflow: hidden;
 }
 
 .main .main-text{
@@ -795,6 +796,14 @@ i{
         height: 50%;
         right: 0rem;
         bottom: 0rem;
+
+    }
+
+    .main .img-box img{
+
+
+        left: 58%;
+        bottom: -5rem;
 
     }
 
