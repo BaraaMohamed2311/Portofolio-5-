@@ -121,31 +121,63 @@ function createProjects(projects){
 let prevP , prevScrollLeft ;
 let started = false;
 function start(e){
+    console.log("hey")
+    if(window.innerWidth >1000){
     started = true;
     prevP = e.clientX;
+    console.log(prevP)
     prevScrollLeft = project_wrapper.scrollLeft;
-    
+    }
+    else{
+        started = true;
+    prevP = e.touches[0].clientX;
+    prevScrollLeft = project_wrapper.scrollLeft;
+    }
     
 }
 
 
 function dragging(e){
+    console.log("aa")
+    if(window.innerWidth >1000){
+
     if(!started) return;
     let scroll_amount = e.clientX - prevP;
     project_wrapper.scrollLeft = prevScrollLeft - scroll_amount;
+    }
+    else{
+        if (!started) return;
+    let scroll_amount = e.touches[0].clientX - prevP;
+    project_wrapper.scrollLeft = prevScrollLeft - scroll_amount;
     
+    }
+
     e.preventDefault();
 }
 
 
 function end(){
+    console.log("zz")
     started = false;
     
 }
 
+
+if(window.innerWidth >1000){
 project_wrapper.addEventListener('mousedown',start);
 
 project_wrapper.addEventListener('mousemove',dragging);
 
 project_wrapper.addEventListener('mouseup',end);
+
+}
+else{
+    project_wrapper.addEventListener('touchstart',start);
+
+    project_wrapper.addEventListener('touchmove',dragging);
+    
+    project_wrapper.addEventListener('touchend',end);
+}
+
+
 
