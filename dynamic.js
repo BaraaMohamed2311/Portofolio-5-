@@ -163,21 +163,21 @@ function end(){
 }
 
 
-if(window.innerWidth >1000){
+
 project_wrapper.addEventListener('mousedown',start);
 
 project_wrapper.addEventListener('mousemove',dragging);
 
 project_wrapper.addEventListener('mouseup',end);
 
-}
-else{
+
+
     project_wrapper.addEventListener('touchstart',start);
 
     project_wrapper.addEventListener('touchmove',dragging);
     
     project_wrapper.addEventListener('touchend',end);
-}
+
 
 
 

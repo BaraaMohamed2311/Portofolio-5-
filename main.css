@@ -763,6 +763,13 @@ i{
         }
       }
 
+      .main .main-text{
+        width: 100%;
+        height:50%;
+        margin: 8rem 0;
+        padding: 0 0.5rem;
+    }
+
     .main .main-text  h1{
         font-size: 4rem;
     }
@@ -834,7 +841,7 @@ i{
 /***********************************************/
 
 .cards-wrapper .cards{
-    margin-left: 155rem;
+    margin-left: 165rem;
 }
 
 
@@ -915,9 +922,10 @@ i{
         }
     
         .main .main-text{
-    
+            width: 100%;
             height:50%;
-            margin: 8rem 1rem;
+            margin: 8rem 0;
+            padding: 0 0.5rem;
         }
     
     
@@ -1037,6 +1045,8 @@ i{
         }
       }
 
+      
+
     .main .img-box{
         position: absolute;
         background-color: var(--dark-gray);
@@ -1068,7 +1078,7 @@ i{
     }
 
     .cards-wrapper .cards{
-        margin-left: 95rem;
+        margin-left: 105rem;
     }
 }
 
@@ -1092,7 +1102,7 @@ i{
     
 
     .cards-wrapper .cards{
-        margin-left: 77rem ;
+        margin-left: 87rem ;
         white-space: nowrap;
         display: flex;
         gap: 3rem;
