@@ -13,7 +13,7 @@ body{
     height: 100vh;
     font-family: 'Bebas Neue', sans-serif;
     color: var(--darkest-gray);
-    
+
 }
 
 h2 {
@@ -97,20 +97,21 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+
 }
 
 .logo{
     font-size: 5rem;
     position: relative;
-    transition: 0.3s linear;
-    -webkit-transition: 0.3s linear;
-    -moz-transition: 0.3s linear;
-    -ms-transition: 0.3s linear;
-    -o-transition: 0.3s linear;
     cursor: pointer;
 }
 
-.logo::after{
+.logo:hover > a{
+    color: #00b08a;
+}
+
+.logo span{
     content: "ortofolio";
     font-size: 3.5rem;
     color: var(--darkest-gray);
@@ -118,20 +119,16 @@ i{
     bottom: 0.5rem;
     left: 2rem;
     opacity: 1;
-    transition: 0.7s linear;
-    -webkit-transition: 0.7s linear;
-    -moz-transition: 0.7s linear;
-    -ms-transition: 0.7s linear;
-    -o-transition: 0.7s linear;
+    
 }
 
-.logo:hover{
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
+.logo span:hover{
+
+    color: #00b08a;
+
 }
+
+
 
 
 .nav-ul{
@@ -151,6 +148,21 @@ i{
 .nav-li:hover > a {
     color: #00b08a;
 }
+
+.nav-li i {
+    font-size: 1.8rem;
+}
+
+
+
+#burger {
+    font-size: 2.5rem;
+    color: #ffff;
+    display: none;
+    cursor: pointer;
+    padding-right: 2rem;
+  }
+  
 
 
 
@@ -506,12 +518,11 @@ i{
 }
 
 .cards-wrapper .cards{
-    margin: 0 0 0 50rem;
+    margin-left: 70rem ;
     white-space: nowrap;
     display: flex;
     gap: 3rem;
     position: absolute;
-    padding: 0 ;
     cursor: grab;
     width: 180rem;
     align-items: start;
@@ -544,6 +555,7 @@ i{
     margin-bottom: 2rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    aspect-ratio: 16/9;
     
 }
 .card .proj-card-text {
@@ -627,19 +639,106 @@ i{
 
 
 
+/**************************contacts**********************************************/
+
+/*******************Footer****************************************************/
+
+.footer {
+    letter-spacing: 3px;
+    width: 100%;
+    background-color: var(--darkest-gray);
+    padding: 12rem 0;
+    height: 100vh;
+  }
+  
+  .footer-box {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8rem;
+    align-items: center;
+  }
+  
+  .footer .row {
+    width: 100%;
+  }
+  
+  .footer-box h1 {
+    margin: 3rem 0;
+    font-size: 3.5rem;
+  }
+  
+  .footer-box span {
+    opacity: 50%;
+    font-size: 1.3rem;
+    margin-left: 5px;
+  }
+  .footer-box span:hover {
+    opacity: 100%;
+    color: #00b08a;
+  }
+  
+  .footer-box h5 {
+    font-size: 1.5rem;
+    margin-left: 3rem 0;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  
+  .footer-box a {
+    color: white;
+  }
+  
+  .footer-box a:hover {
+    color: #00b08a;
+  }
+  
+  .left-footer,
+  .right-footer {
+    width: 35%;
+    height: 100%;
+  }
+  
+  .right-footer h5:hover {
+    color: #00b08a;
+  }
 
 
-/*********************RESPONSIVE***********************************************/
+
+
+/**************************RESPONSIVE******************************************/
 
 @media (max-width:800px) {
     html{
         font-size: 11px;
     }
 
-    .nav-ul{
-        gap: 2rem;
+    
+
+
+    .nav-ul {
+        gap: 1.7rem;
         margin-right: 0rem;
-    }
+        justify-content: center;
+        background-color: white;
+        opacity: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        position: fixed;
+        top: 6.5rem;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        padding: 1rem 0rem 1rem 0;
+        box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.164) , 0px 10px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      #burger {
+        display: block;
+        color: var(--darkest-gray);
+      }
 
     .nav-ul .nav-li a{
 
@@ -726,11 +825,46 @@ i{
 /***********************************************/
 
 .cards-wrapper .cards{
-    margin: 0;
-    padding: 0 0 0 10rem;
-
+    margin-left: 140rem;
 }
 
+
+/************************************/
+.footer {
+    padding: 6rem 0;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-box h1 {
+    font-size: 3.5rem;
+  }
+  .footer-box h5 {
+    font-size: 2rem;
+  }
+
+  .footer-box span {
+    font-size: 1.8rem;
+  }
+
+  .right-footer,
+  .left-footer {
+    width: 100%;
+    height: 40%;
+  }
+
+  .left-footer,
+  .right-footer {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .right-footer {
+    margin-top: 2rem;
+  }
 
 }
 
@@ -739,13 +873,32 @@ i{
     @media (max-width:1200px){
 
         html{
-            font-size: 13px;
+            font-size: 12px;
         }
     
-        .nav-ul{
-            gap: 2rem;
+        
+
+        .nav-ul {
+            gap: 6rem;
             margin-right: 0rem;
-        }
+            justify-content: center;
+            background-color: white;
+            opacity: 0;
+            left: 0;
+            width: 100%;
+            height: 5rem;
+            position: fixed;
+            top: 6.5rem;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            padding: 1rem 0rem 1rem 0;
+            box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.164) , 0px 10px 20px rgba(0, 0, 0, 0.12);
+          }
+    
+          #burger {
+            display: block;
+            color: var(--darkest-gray);
+          }
     
         .nav-ul .nav-li a{
     
@@ -843,9 +996,8 @@ i{
     /***********************************************/
     
     .cards-wrapper .cards{
-        align-content:flex-start;
-        margin: 0;
-    padding: 0 0 0 48rem;
+        margin-left: 115rem;
+
     }
 
 
@@ -857,6 +1009,12 @@ i{
     @media (max-width:1500px) {
         html{
             font-size: 14px;
+        }
+
+
+        .nav-ul{
+            gap: 8rem;
+            margin-right: 0rem;
         }
 
     
@@ -900,8 +1058,41 @@ i{
         
     }
 
-    
+    .cards-wrapper .cards{
+        margin-left: 95rem;
+    }
 }
+
+
+}
+
+@media (min-width:1500px) {
+    
+    @media (max-width:1800px) {
+        .main .img-box{
+            position: absolute;
+            background-color: var(--dark-gray);
+            width: 40rem;
+            height: 40rem;
+            box-shadow: inset 3rem -6rem  13rem #171717 , inset -8rem 10rem  16rem #ffffff73;
+            right: 5.8rem;
+            bottom: 3rem;
+            
+        }
+    }
+    
+
+    .cards-wrapper .cards{
+        margin-left: 77rem ;
+        white-space: nowrap;
+        display: flex;
+        gap: 3rem;
+        position: absolute;
+        cursor: grab;
+        width: 180rem;
+        align-items: start;
+        opacity: 0;
+    }
 }
 
 

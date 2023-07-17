@@ -1,4 +1,22 @@
+
 import {skills,projects} from './data.js';
+
+
+/*******************Burger*************************/
+const burger = document.querySelector("#burger");
+const ul = document.querySelector(".nav-ul");
+let burger_mood = "closed";
+
+
+burger.addEventListener("click", () => {
+    if (burger_mood === "closed") {
+      ul.style = `opacity:1; pointer-events:all;`;
+      burger_mood = "opened";
+    } else if (burger_mood === "opened") {
+      ul.style = `opacity:0; pointer-events:none;`;
+      burger_mood = "closed";
+    }
+  });
 
 
 let progress_bars_wrapper = document.querySelector(".right-skills");
@@ -8,6 +26,8 @@ let bars;
 
 let project_cards = document.querySelector(".cards");
 let project_wrapper = document.querySelector(".cards-wrapper");
+
+
 
 
 /***************************Skills******************************/
@@ -104,7 +124,7 @@ function start(e){
     started = true;
     prevP = e.clientX;
     prevScrollLeft = project_wrapper.scrollLeft;
-    console.log("started")
+    
     
 }
 
@@ -113,14 +133,14 @@ function dragging(e){
     if(!started) return;
     let scroll_amount = e.clientX - prevP;
     project_wrapper.scrollLeft = prevScrollLeft - scroll_amount;
-    console.log("dragging")
+    
     e.preventDefault();
 }
 
 
 function end(){
     started = false;
-    console.log("end")
+    
 }
 
 project_wrapper.addEventListener('mousedown',start);
